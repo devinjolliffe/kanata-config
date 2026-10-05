@@ -10,7 +10,7 @@ Kanata configuration for the Lofree Flow Lite84 US ANSI keyboard.
 - Space tap = Space
 - Space hold = navigation layer
 - Arrow-style navigation on I/J/K/L
-- Home / Page Down / Page Up / End on Y/U/O/P
+- Home / Page Up / Page Down / End on Y/U/O/P
 - Delete on ;
 - Backtick/grave toggles the modified layer
 
