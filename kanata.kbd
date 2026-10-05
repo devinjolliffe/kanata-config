@@ -43,6 +43,6 @@
 (deflayer navigation
   _
   _ _ _ _ _ _ left down right del
-  home pgdn up pgup end
+  home pgup up pgdn end
   _
 )
