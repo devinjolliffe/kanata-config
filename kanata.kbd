@@ -1,0 +1,48 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  grv
+  a s d f g h j k l ;
+  y u i o p
+  spc
+)
+
+(defalias
+  a (tap-hold-release 250 250 a lctl)
+  s (tap-hold-release 250 250 s lalt)
+  d (tap-hold-release 250 250 d lmet)
+  f (tap-hold-release 250 250 f lsft)
+
+  j (tap-hold-release 250 250 j rsft)
+  k (tap-hold-release 250 250 k rmet)
+  l (tap-hold-release 250 250 l ralt)
+  semimod (tap-hold-release 250 250 ; rctl)
+
+  nav (tap-hold-release 200 150 spc (layer-while-held navigation))
+
+  toggle-on (tap-hold 200 250 (layer-switch mods) grv)
+  toggle-off (tap-hold 200 250 (layer-switch base) grv)
+)
+
+(deflayer base
+  @toggle-on
+  a s d f g h j k l ;
+  y u i o p
+  spc
+)
+
+(deflayer mods
+  @toggle-off
+  @a @s @d @f g h @j @k @l @semimod
+  y u i o p
+  @nav
+)
+
+(deflayer navigation
+  _
+  _ _ _ _ _ _ left down right del
+  home pgdn up pgup end
+  _
+)
